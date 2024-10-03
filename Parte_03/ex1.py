@@ -1,13 +1,26 @@
 #!/usr/bin/env python3
 
+from colorama import Fore, init, Back, Style
+import math
 from time import time
-print("Time since 1/Jan/1970: " + str(time()) + " seconds")
-
 from time import time, ctime
-print("Today's date: " + str(ctime()))
 
 def tic():
     global start_time
-    
+    start_time = time()                                    
 
-def toc()
+def toc():
+    end_time = time()
+    duration = end_time - start_time
+    print(f"Duração: {Fore.YELLOW}{duration:.2f} segundos")
+
+def main():
+    tic()
+    for i in range(50000001):
+        result = math.sqrt(i)
+    toc()
+
+
+if __name__ == "__main__":
+    main()
+   
