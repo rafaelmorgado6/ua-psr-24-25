@@ -3,7 +3,7 @@
 from colorama import Fore, init, Back, Style
 
 # Inicializa o colorama (necessário apenas no Windows)
-init(autoreset=True)
+#init(autoreset=True)
 
 maximum_number = 10000
 

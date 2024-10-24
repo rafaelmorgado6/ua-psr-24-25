@@ -1,0 +1,4 @@
+User: "Default" Test duration: 31.6028 Score: 100.0
+User: "Default" Test duration: 19.7952 Score: 75.0
+User: "Default" Test duration: 34.642 Score: 33.33
+User: "Default" Test duration: 1.0975 Score: 100.0
