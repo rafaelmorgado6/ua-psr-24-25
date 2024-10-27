@@ -9,7 +9,8 @@ def main():
 
     _, image = capture.read()  # get an image from the camera
 
-    cv2.imshow(window_name, image)
+    inverted_image = cv2.flip(image, 1)
+    cv2.imshow(window_name, inverted_image)
     
     cv2.waitKey(0) # wait for a key press before proceeding
     
