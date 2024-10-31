@@ -14,7 +14,7 @@ def mouse_handler(event, x, y, flags, params):
         for i in range(-brush_size, brush_size + 1):
             for j in range(-brush_size, brush_size + 1):
                     white_image[y + i, x + j] = current_color  # Definindo a cor do pixel para verde
-        cv2.imshow('window', white_image)
+        cv2.imshow('r = red / g = green / b = blue', white_image)
 
 def main():
     global white_image  # Usar a variável global 'image'
@@ -23,10 +23,10 @@ def main():
     white_image = np.full((400, 600, 3), 255, dtype=np.uint8)  # Formato (altura, largura, canais)
 
     # Exibir a imagem
-    cv2.imshow('window', white_image)
+    cv2.imshow('r = red / g = green / b = blue', white_image)
 
     # Definir o callback de mouse para a janela
-    cv2.setMouseCallback('window', mouse_handler)
+    cv2.setMouseCallback('r = red / g = green / b = blue', mouse_handler)
 
     while True:
         key = cv2.waitKey(1)  # Esperar por uma tecla

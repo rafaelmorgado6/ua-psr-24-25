@@ -6,13 +6,17 @@ import numpy as np
 face_classifier = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 def detect_bounding_box(image):
+
+    # Converte a imagem para tons de cinza
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Deteta rostos na imagem 
     faces = face_classifier.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(40, 40))
     
+    # Desenha um retângulo ao redor de cada rosto detectado
     for (x, y, w, h) in faces:
-        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 4)
+        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
     return faces
-
 
 
 def highlight_edges(image, faces):
@@ -50,8 +54,6 @@ def highlight_edges(image, faces):
 
 
 
-
-# Main function to test face detection
 def main():
      
     capture = cv2.VideoCapture(0)
